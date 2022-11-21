@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { Client } from 'pg';
 
 import { AppController } from './app.controller';
 
@@ -16,6 +15,7 @@ import { OrderModule } from './order/order.module';
   ],
   controllers: [
     AppController,
-  ]
+  ],
+  providers: []
 })
 export class AppModule {}
