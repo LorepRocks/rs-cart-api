@@ -4,7 +4,9 @@ import { LocalAuthGuard, AuthService, JwtAuthGuard, BasicAuthGuard } from './aut
 @Controller()
 export class AppController {
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+  ) {}
 
   @Get([ '', 'ping' ])
   healthCheck(): any {
@@ -13,6 +15,7 @@ export class AppController {
       message: 'OK',
     };
   }
+
 
   @UseGuards(LocalAuthGuard)
   @Post('api/auth/login')

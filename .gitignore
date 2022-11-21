@@ -1,6 +1,11 @@
 # compiled output
 /dist
 /node_modules
+dbConstants.ts
+
+#serverless
+.serverless/
+.env
 
 # Logs
 logs
